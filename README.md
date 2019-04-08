@@ -9,8 +9,8 @@
 ```go
 // func which will execute through future
 fb := func() (interface{}, error) {
-		time.Sleep(5 * time.Second)
-		return 10, nil
+	time.Sleep(5 * time.Second)
+	return 10, nil
 }
 // create future instance
 f := future.New(fb)
@@ -24,8 +24,8 @@ v, err := f.Get()
 ```go
 // func which will execute through future
 fb := func() (interface{}, error) {
-		time.Sleep(5 * time.Second)
-		return 10, nil
+	time.Sleep(5 * time.Second)
+	return 10, nil
 }
 // create future instance
 f := future.New(fb)
@@ -39,8 +39,8 @@ v, timeout, err := f.GetWithTimeout(3 * time.Second)
 ```go
 // func which will execute through future
 f := future.New(func() (interface{}, error) {
-		time.Sleep(10 * time.Second)
-		return 5, nil
+	time.Sleep(10 * time.Second)
+	return 5, nil
 })
 // cancel future after 2 seconds
 go func() {
